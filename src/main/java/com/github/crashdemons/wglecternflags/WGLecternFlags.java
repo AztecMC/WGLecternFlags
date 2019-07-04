@@ -65,6 +65,7 @@ public class WGLecternFlags extends JavaPlugin implements Listener {
         try {
             // register our flag with the registry
             registry.register(FLAG_LECTERN_TAKE);
+            registry.register(FLAG_LECTERN_TAKE_WARNING);
             return true;
         } catch (FlagConflictException e) {
             // some other plugin registered a flag by the same name already.
