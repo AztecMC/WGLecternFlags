@@ -111,7 +111,7 @@ public class WGLecternFlags extends JavaPlugin implements Listener {
         com.sk89q.worldedit.util.Location wgLoc = BukkitAdapter.adapt(loc);
         RegionQuery query = getWorldGuard().getPlatform().getRegionContainer().createQuery();
         StateFlag.State state = query.queryState(wgLoc, wgPlayer, FLAG_LECTERN_TAKE);
-        StateFlag.State warningstate = query.queryState(wgLoc, null, FLAG_LECTERN_TAKE_WARNING);
+        StateFlag.State warningstate = query.queryState(wgLoc, wgPlayer, FLAG_LECTERN_TAKE_WARNING);
         if(state==StateFlag.State.DENY){
            if(warningstate!=StateFlag.State.DENY) player.sendMessage(ChatColor.RED+"Hey! "+ChatColor.GRAY+"Sorry, but you can't take books from lecterns here.");
            event.setCancelled(true);
