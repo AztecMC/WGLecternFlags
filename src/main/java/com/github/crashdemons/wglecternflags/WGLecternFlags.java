@@ -97,8 +97,8 @@ public class WGLecternFlags extends JavaPlugin implements Listener {
     @Override
     public void onDisable(){
         getLogger().info("Disabling...");
-        getLogger().info("Disabled.");
-    }
+        getLogger().info("Disabled."); 
+   }
     
     @EventHandler(priority=EventPriority.HIGHEST)
     public void onLecternTake(PlayerTakeLecternBookEvent event){
